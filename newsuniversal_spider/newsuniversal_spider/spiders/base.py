@@ -36,29 +36,7 @@ class BaseSpider(Spider):
 
         if not config:
             raise
-        # spider.config = config
-        # spider.site_forum_id = site_forum_id
-        #
-        # # 将config中的custom_settings设置到spider中
-        # custom_settings = spider.config.get("custom_settings")
-        # if custom_settings:
-        #     settings = (
-        #         json.loads(custom_settings)
-        #         if isinstance(custom_settings, str)
-        #         else custom_settings
-        #     )
-        #
-        #     if settings.get("playwright_cdp_url"):
-        #         settings["playwright_cdp_url"] = settings["playwright_cdp_url"].replace(
-        #             "crawlab-ubuntu20-desktop", env["CDP_BROWSER_ADDRESS"]
-        #         )
-        #
-        #     # 确保settings中的key都是大写, scrapy中的settings都是大写的
-        #     settings = {key.upper(): value for key, value in settings.items()}
-        #     spider.settings.setdict(settings, priority="spider")
-        #
-        # cls.storage.close()
-        # return spider
+
     def replace_api_payload(
         self, payload: dict[str, Any] | str, **kwargs
     ) -> dict[str, Any] | str:

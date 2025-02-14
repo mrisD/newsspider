@@ -1,6 +1,8 @@
-from typing import List, Any, Dict
+from typing import List, Any, Dict, AsyncGenerator, Callable
 
 from scrapy import Request
+from scrapy.http import HtmlResponse
+
 from newsuniversal_spider.spider_kit.request import Request as ApiRequest
 
 from newsuniversal_spider.newsuniversal_spider.spiders.base import BaseSpider
