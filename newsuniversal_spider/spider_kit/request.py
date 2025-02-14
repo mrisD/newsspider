@@ -7,7 +7,7 @@ from scrapy import FormRequest
 from scrapy.http.request.form import FormdataKVType
 from scrapy.utils.python import is_listlike, to_bytes
 
-
+from newsuniversal_spider.spider_kit.fingerprint import request_fingerprint
 
 FormdataType = JsondataType = Optional[
     Union[dict[str, Any], List[Tuple[str, str]], str]
